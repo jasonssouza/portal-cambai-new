@@ -43,7 +43,9 @@ export default function CadastroPage() {
           router.push('/area-cliente');
         }
       }
-    } catch () {
+    } catch (err) { // Adicione um nome de variável, como 'err'
+      // Opcional, mas recomendado para debug: logar o erro real
+      console.error("Erro no cadastro:", err);
       setError('Erro inesperado ao se cadastrar.');
     } finally {
       setLoading(false);
