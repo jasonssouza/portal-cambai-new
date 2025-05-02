@@ -11,7 +11,7 @@ import { PrismaClient, Role } from "@prisma/client"      // Importa o Prisma Cli
 const clientId = process.env.GOOGLE_CLIENT_ID;
 const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
 const prisma = new PrismaClient()
-import { getToken } from "next-auth/jwt";
+//import { getToken } from "next-auth/jwt";
 
 
 console.log("--- Initializing NextAuth Handler (v5 Style) with Prisma Adapter ---");
@@ -92,7 +92,7 @@ export const authOptions = {
         }
         return session;
       },
-      async redirect({ baseUrl, url, token }) {
+      async redirect({ baseUrl, token }) {
         if (token?.role === 'SELLER') {
           return `${baseUrl}/dashboard`;
         }

@@ -1,6 +1,6 @@
 // src/app/api/agenda/route.ts
 import { NextRequest, NextResponse } from "next/server";
-import { authOptions } from "../auth/[...nextauth]/route";
+//import { authOptions } from "../auth/[...nextauth]/route";
 import { PrismaClient } from "@prisma/client";
 import { getToken } from "next-auth/jwt";
 

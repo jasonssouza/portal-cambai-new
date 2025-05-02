@@ -43,7 +43,7 @@ export default function CadastroPage() {
           router.push('/area-cliente');
         }
       }
-    } catch (err) {
+    } catch () {
       setError('Erro inesperado ao se cadastrar.');
     } finally {
       setLoading(false);
